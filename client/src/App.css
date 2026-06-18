@@ -4,13 +4,13 @@ body {
   margin: 0;
   min-height: 100vh;
   
-  /* Color 1: Cream Base */
-  background-color: #F4F1E2; 
+  /* Color 1: Warm Recipe Journal Paper */
+  background-color: #F2EBD9; 
   
-  /* Color 2: Blue Stripes (using 50% opacity so they blend) */
+  /* Color 2: Vintage Soft Blue Grid (Soft kitchen towel aesthetic) */
   background-image: 
-    linear-gradient(90deg, rgba(216, 235, 249, 0.8) 50%, transparent 50%),
-    linear-gradient(rgba(216, 235, 249, 0.8) 50%, transparent 50%);
+    linear-gradient(90deg, rgba(163, 184, 191, 0.4) 50%, transparent 50%),
+    linear-gradient(rgba(163, 184, 191, 0.4) 50%, transparent 50%);
   
   /* Responsive grid size based on screen width */
   background-size: 8vw 8vw; 
@@ -29,7 +29,7 @@ h1 {
   font-size: 5rem;
   font-weight: 700;
   margin: 1rem 0 0 0;
-  color: #513229
+  color: #2C4A3E; /* Deep Sage Green */
 }
 
 .groceryListContainer {
@@ -43,6 +43,10 @@ h1 {
 
 .groceryListContainer.open {
   transform: translateX(1rem);
+}
+
+.groceryListContainer polygon {
+  display: none !important;
 }
 
 .groceryList {
