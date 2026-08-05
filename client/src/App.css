@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Lavishly+Yours&display=swap');
 
 :root {
-  --primary-font-color: #010030;
+  --primary-font-color: #010047;
+  --secondary-font-color: #0300d1;
   --primary-background-color: rgba(201, 170, 103, .3);
   --secondary-background-color: rgba(54, 9, 9, 0.671);
   --tertiary-background-color: rgba(85, 16, 16, 0.747);
@@ -31,12 +32,25 @@ body {
   align-items: center;
 }
 
-h1 {
+.title {
+  width: max-content;
+  position: absolute;
   font-family: 'Ephesis', cursive;
-  font-size: 5rem;
+  font-size: 5vw;
   font-weight: 700;
-  margin: 1rem 0 0 0;
+  z-index: 1;
+  color: var(--secondary-font-color);
+  top: 0.1rem;
+  left: 0.1rem;
+  user-select: none;
+}
+
+.title.front {
+  position: relative;
+  z-index: 2;
   color: var(--primary-font-color);
+  top: 0;
+  left: 0;
 }
 
 .groceryListContainer {
@@ -46,6 +60,7 @@ h1 {
   transform: translateX(-28rem);
   top: 1rem;
   transition: transform 0.5s ease-in-out;
+  z-index: 10;
 }
 
 .groceryListContainer.open {
@@ -64,4 +79,21 @@ h1 {
 .items {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1vw;
+  max-width: 80%;
+  padding-top: min(2vw, 10px);
+  justify-content: center;
+}
+
+.itemFrame {
+  width: 200px;
+  flex-shrink: 0;
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease;
+}
+
+.itemFrame:hover {
+  cursor: pointer;
+  transform: rotate(0deg) scale(1.05);
 }

@@ -33,12 +33,28 @@ const myItems = {
   home:     [],
 }
 
+const pinColors = ["#ef4444", "#3b82f6", "#22c55e", "#eab308", "#ec4899"]
+
+function getRandomColor() {
+  return pinColors[Math.floor(Math.random() * pinColors.length)]
+}
+
 function App() {
-  const [groceryListOut, setGroceryListOut] = useState(false)
+  const [groceryListOut, setGroceryListOut] = useState(false);
+
+  const rotations = [-6, 4, -3, 7, -8, 2];
+  const [pins] = useState(() => rotations.map(() => getRandomColor()))
 
   return (
     <div className="mainFrame">
-      <h1>Table For Two</h1>
+      <div className="title" style={{ position: "relative", display: "inline-block" }}>
+        <span className="title">
+          Table For Two
+        </span>
+        <span className="title front">
+          Table For Two
+        </span>
+      </div>
       <div
         className={`groceryListContainer ${groceryListOut ? 'open' : ''}`}
         onClick={() => setGroceryListOut(!groceryListOut)}
@@ -46,8 +62,9 @@ function App() {
         <GroceryList config={myConfig} items={myItems} />
       </div>
       <div className="items">
-        <Item />
-        <Item />
+        {rotations.map((deg, i) => (
+          <Item key={i} rotation={deg} pinColor={pins[i]} />
+        ))}
       </div>
     </div>
   )
