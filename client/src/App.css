@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Lavishly+Yours&display=swap');
 
 :root {
-  --primary-font-color: #513229;
+  --primary-font-color: #010030;
   --primary-background-color: rgba(201, 170, 103, .3);
-  --secondary-background-color: rgba(34, 71, 135, .5);
-  --tertiary-background-color: rgba(111, 154, 191, .4);
+  --secondary-background-color: rgba(54, 9, 9, 0.671);
+  --tertiary-background-color: rgba(85, 16, 16, 0.747);
 }
 
 body {
