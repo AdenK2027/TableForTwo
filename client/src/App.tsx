@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Item from './item';
 
 function App() {
 
@@ -14,8 +15,13 @@ function App() {
       }}>
         <img src="/assets/GroceryList.png" className="groceryList"></img>
       </div>
+      <div className="items">
+        <Item />
+        <Item />
+      </div>
     </div>
   )
 }
 
 export default App
+

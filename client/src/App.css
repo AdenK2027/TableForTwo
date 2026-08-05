@@ -1,16 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Lavishly+Yours&display=swap');
 
+:root {
+  --primary-font-color: #513229;
+  --primary-background-color: rgba(201, 170, 103, .3);
+  --secondary-background-color: rgba(34, 71, 135, .5);
+  --tertiary-background-color: rgba(111, 154, 191, .4);
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   
   /* Color 1: Cream Base */
-  background-color: #F4F1E2; 
+  background-color:  var(--primary-background-color);
   
   /* Color 2: Blue Stripes (using 50% opacity so they blend) */
   background-image: 
-    linear-gradient(90deg, rgba(216, 235, 249, 0.8) 50%, transparent 50%),
-    linear-gradient(rgba(216, 235, 249, 0.8) 50%, transparent 50%);
+    linear-gradient(90deg, var(--tertiary-background-color) 50%, transparent 50%),
+    linear-gradient(var(--secondary-background-color) 50%, transparent 50%);
   
   /* Responsive grid size based on screen width */
   background-size: 8vw 8vw; 
@@ -29,7 +36,7 @@ h1 {
   font-size: 5rem;
   font-weight: 700;
   margin: 1rem 0 0 0;
-  color: #513229
+  color: var(--primary-font-color);
 }
 
 .groceryListContainer {
@@ -48,4 +55,9 @@ h1 {
 .groceryList {
   margin: 0;
   width: 30rem;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
 }
