@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Lavishly+Yours&display=swap');
 
 :root {
-  --primary-font-color: #010047;
-  --secondary-font-color: #0300d1;
-  --primary-background-color: rgba(201, 170, 103, .3);
-  --secondary-background-color: rgba(54, 9, 9, 0.671);
-  --tertiary-background-color: rgba(85, 16, 16, 0.747);
+  --primary-font-color: #8b310070;
+  --secondary-font-color: #3182fc65;
+  --primary-background-color: #eaefff;
+  --secondary-background-color: #d3dcfa;
+  --tertiary-background-color: #8b31001e;
 }
 
 body {
@@ -17,11 +17,11 @@ body {
   
   /* Color 2: Vintage Soft Blue Grid (Soft kitchen towel aesthetic) */
   background-image: 
-    linear-gradient(90deg, var(--tertiary-background-color) 50%, transparent 50%),
-    linear-gradient(var(--secondary-background-color) 50%, transparent 50%);
+    linear-gradient(var(--tertiary-background-color) 50%, transparent 50%),
+    linear-gradient(90deg, var(--secondary-background-color) 50%, transparent 50%);
   
   /* Responsive grid size based on screen width */
-  background-size: 8vw 8vw; 
+  background-size: 3vw 3vw; 
 }
 
 .mainFrame {
@@ -36,8 +36,8 @@ body {
   width: max-content;
   position: absolute;
   font-family: 'Ephesis', cursive;
-  font-size: 5vw;
-  font-weight: 700;
+  font-size: 7vw;
+  font-weight: 500;
   z-index: 1;
   color: var(--secondary-font-color);
   top: 0.1rem;
