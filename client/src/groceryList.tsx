@@ -4,7 +4,7 @@ import { useState } from 'react'
 // Change any of these to instantly restyle the grocery list
 export const GROCERY_LIST_CONFIG = {
   colors: {
-    paper:    '#F4F1E2',   // background of the list
+    paper:    '#ff0400',   // background of the list
     lines:    '#C8382A',   // horizontal rule + column divider color
     text:     '#C8382A',   // section header + title text color
     title:    '#C8382A',   // "GROCERY LIST" title color
@@ -242,7 +242,7 @@ export default function GroceryList({ config: configOverride, items = {} }: Groc
         letterSpacing="2"
         opacity={0.5}
       >
-        MBP
+        A&D
       </text>
     </svg>
   )

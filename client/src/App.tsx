@@ -6,15 +6,15 @@ import GroceryList from './groceryList'
 // ─── Customize the list here ─────────────────────────────────────────────────
 const myConfig = {
   colors: {
-    paper:  '#F2EBD9',  // Warm, aged parchment paper
+    paper:  '#fcfeff',  // Warm, aged parchment paper
     lines:  '#8C6D53',  // Faded sepia ink for lines + dividers
-    text:   '#4A3525',  // Deep espresso brown for readable headers
-    title:  '#2C4A3E',  // Sage/Forest green for the "GROCERY LIST" title
+    text:   '#232f65',  // Deep espresso brown for readable headers
+    title:  '#4d6196',  // light blue for the "GROCERY LIST" title
   },
   fonts: {
-    title:   '"Caveat", cursive',  // Now unified with the main title
-    headers: '"Caveat", cursive',
-    items:   '"Caveat", cursive',
+    title:   '"Ephesis",',  // Now unified with the main title
+    headers: '"Ephesis",',
+    items:   '"Ephesis", cursive',
   },
   sizes: {
     width: 480, height: 680, rowHeight: 26, 
