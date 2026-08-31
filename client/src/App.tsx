@@ -3,16 +3,15 @@ import './App.css'
 import Item from './item';
 import GroceryList from './groceryList'
 
-// ─── Customize the list here ─────────────────────────────────────────────────
 const myConfig = {
   colors: {
-    paper:  '#fcfeff',  // Warm, aged parchment paper
-    lines:  '#8C6D53',  // Faded sepia ink for lines + dividers
-    text:   '#232f65',  // Deep espresso brown for readable headers
-    title:  '#4d6196',  // light blue for the "GROCERY LIST" title
+    paper:  '#fcfeff',
+    lines:  '#8C6D53',
+    text:   '#232f65',
+    title:  '#4d6196',
   },
   fonts: {
-    title:   '"Ephesis",',  // Now unified with the main title
+    title:   '"Ephesis",',
     headers: '"Ephesis",',
     items:   '"Ephesis", cursive',
   },
@@ -22,7 +21,6 @@ const myConfig = {
   },
 }
 
-// ─── Put your grocery items here ─────────────────────────────────────────────
 const myItems = {
   produce:  ['apples', 'spinach', 'carrots'],
   cold:     ['whole milk', 'cheddar'],
@@ -48,12 +46,12 @@ function App() {
   return (
     <div className="mainFrame">
       <div className="title" style={{ position: "relative", display: "inline-block" }}>
-        <span className="title">
-          Table For Two
-        </span>
-        <span className="title front">
-          Table For Two
-        </span>
+        <div className="title-container">
+          <div className="title">
+            <img src="assets/tape.png"></img>
+            Table For Two
+          </div>
+        </div>
       </div>
       <div
         className={`groceryListContainer ${groceryListOut ? 'open' : ''}`}

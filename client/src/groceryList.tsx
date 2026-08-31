@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 // ─── Config ─────────────────────────────────────────────────────────────────
 // Change any of these to instantly restyle the grocery list
 export const GROCERY_LIST_CONFIG = {

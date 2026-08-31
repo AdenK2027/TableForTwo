@@ -32,25 +32,31 @@ body {
   align-items: center;
 }
 
+.title-container {
+  position: relative;
+  display: inline-block;
+}
+
+.title-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 45vw;
+  height: 8vw;
+  pointer-events: none;
+}
+
 .title {
   width: max-content;
-  position: absolute;
+  position: relative;
   font-family: 'Ephesis', cursive;
   font-size: 7vw;
   font-weight: 500;
-  z-index: 1;
-  color: var(--secondary-font-color);
-  top: 0.1rem;
-  left: 0.1rem;
-  user-select: none;
-}
-
-.title.front {
-  position: relative;
-  z-index: 2;
   color: var(--primary-font-color);
-  top: 0;
-  left: 0;
+  text-shadow: 0.1rem 0.1rem 0 var(--secondary-font-color);
+  user-select: none;
 }
 
 .groceryListContainer {
