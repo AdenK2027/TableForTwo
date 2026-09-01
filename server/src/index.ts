@@ -12,7 +12,7 @@ const apiKey = process.env.AIRTABLE_API_KEY;
 const baseId = process.env.AIRTABLE_BASE_ID;
 
 if (!apiKey || !baseId) {
-  throw new Error('Missing Airtable environment variables in .env');
+  throw new Error('Issue reading from .env file');
 }
 
 const base = new Airtable({ apiKey }).base(baseId);
@@ -21,7 +21,25 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Backend server is alive and running!');
+  res.send('Backend server running');
+});
+
+app.get('/api/recipes', async (req: Request, res: Response) => {
+  try {
+    const records = await base('Recipes').select().all();
+
+    const formattedRecipes = records.map((record) => ({
+      id: record.id,
+      name: record.get('name'),
+      thumbnail: record.get('thumbnail'),
+    }));
+
+    res.json(formattedRecipes);
+
+  } catch (error) {
+    console.error('Error fetching recipes:', error);
+    res.status(500).json({ error: 'Failed to fetch recipes' });
+  }
 });
 
 app.listen(PORT, () => {
